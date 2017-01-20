@@ -248,6 +248,10 @@ IB_DESIGNABLE
 @property (assign, nonatomic) UIViewContentMode placeholderImageViewContentMode;
 
 
+@property (assign, nonatomic, getter=isSecureTextEntry) BOOL secureTextEntry;
+
+@property (readwrite, nonatomic, nullable) UIView *inputView;
+
 /**
  *  @brief returns LUNField in bordered form with templated format
  *

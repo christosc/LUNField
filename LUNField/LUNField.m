@@ -129,6 +129,18 @@ static const CGFloat kLUNInitialVelocity = 0.0f;
     return self;
 }
 
+#pragma mark - Computed Properties
+
+- (UIView * _Nullable)inputView {
+    return self.textFields.firstObject.inputView;
+}
+
+- (void)setInputView:(UIView * _Nullable)view {
+    for (UITextField *t in self.textFields) {
+        t.inputView = view;
+    }
+}
+
 #pragma mark Life cycle
 
 - (void)layoutSubviews {
@@ -563,6 +575,7 @@ static const CGFloat kLUNInitialVelocity = 0.0f;
     }
     [textField addTarget:self action:@selector(textFieldTextChanged:) forControlEvents:UIControlEventEditingChanged];
     textField.translatesAutoresizingMaskIntoConstraints = NO;
+    textField.secureTextEntry = self.secureTextEntry;
 }
 
 #pragma mark placeholder setup
