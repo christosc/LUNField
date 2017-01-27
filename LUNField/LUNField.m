@@ -582,7 +582,7 @@ static const CGFloat kLUNInitialVelocity = 0.0f;
 
 - (void)setupPlaceholderPositionWithAlignment:(LUNPlaceholderAlignment)alignment {
     self.placeholderAlignment = alignment;
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.placeholderLabel attribute:NSLayoutAttributeLeading multiplier:1.0f constant:-4]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.placeholderLabel attribute:NSLayoutAttributeLeading multiplier:1.0f constant:0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.placeholderLabel attribute:NSLayoutAttributeTrailing multiplier:1.0f constant:0]];
     [self layoutIfNeeded];
 }
